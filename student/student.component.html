@@ -1,0 +1,32 @@
+
+<br><br><br>
+<button (click)="displayInfo()"> GET</button>&nbsp;&nbsp;
+
+<button (click)="insertInfo()"> POST</button>&nbsp;&nbsp;
+
+<button (click)="editInfo()"> PUT</button>&nbsp;&nbsp;
+
+<button (click)="delInfo()"> DELETE</button>
+
+<div>
+<table>
+    <tr>
+        <th> StudentName</th>
+        <th> StudentId</th>
+        <th> Grade</th>
+        <th> Course</th>
+        <th>Address</th>
+        <th> Phone No</th>
+    </tr>
+    
+    <tbody>
+  <tr *ngFor="let item of (response|async)">
+ <td>  {{item.stud_name}} </td>
+ <td>  {{item.stud_id}} </td>
+ <td>  {{item.stud_grade}} </td>
+ <td>   {{item.stud_course}} </td>
+ <td>  {{item.stud_address}} </td>
+ <td>   {{item.ph_no}} </td>
+</tbody>
+</table>
+</div>
